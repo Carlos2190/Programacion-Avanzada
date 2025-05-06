@@ -27,14 +27,12 @@ public class Propietario implements Serializable {
 
 
     @OneToMany(mappedBy = "propietario", cascade = CascadeType.ALL)
-    private List<Vehiculo> vehiculo; // sin 's'
+    private List<Vehiculo> vehiculo; 
 
-    // Constructor sin argumentos que inicializa la lista
     public Propietario() {
         this.vehiculo = new ArrayList<>();
     }
 
-    // Constructor con argumentos
     public Propietario(String cedula, String apellido, String nombre, List<Vehiculo> vehiculo) {
         this.cedula = cedula;
         this.apellido = apellido;
